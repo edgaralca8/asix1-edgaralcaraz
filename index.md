@@ -1,26 +1,22 @@
 ---
 layout: default
-title: "Curso de Machine Learning"
+title: "IMPLANTACIO SISTEMES OPERATIUS - Edgar Alcaraz"
 ---
 
-Este repositorio contiene el material del curso de Machine Learning desarrollado por Mireia Consarnau.
+Introducció al Projecte de Sistemes Operatius
 
-- Índice y enlaces a las unidades del curso.
-- Recursos en formato PDF, vídeos, y Google Colab.
-- Código y ejemplos prácticos.
+Autor: Edgar Alcaraz
+
+El present projecte de Sistemes Operatius ha estat desenvolupat amb l’objectiu de consolidar els coneixements teòrics i pràctics adquirits al llarg del curs, mitjançant l’aplicació de diferents eines, tècniques i bones pràctiques en entorns reals de treball. El projecte s’estructura en cinc sprints, cadascun centrat en objectius específics que permeten avançar progressivament en la comprensió i domini dels sistemes operatius.
 
 ## Licencia
 
-El contenido está bajo licencia [Creative Commons BY-NC-SA 3.0 ES](LICENSE.md).
+El contenido está bajo licencia [Creative Commons BY-NC-SA 4.0 ES](LICENSE.md).
 
-## Contenido del curso
+## Contingut del curs
 
-### [Unidad 1. Fundamentos de la Inteligencia Artificial y el Aprendizaje Automático](unidad1/unidad1.md)  
-### [Unidad 2. Preprocesamiento de datos: preparando la base del aprendizaje automático](unidad2/unidad2.md)  
-### [Unidad 3. Aprendizaje supervisado: modelos para análisis predictivo](unidad3/unidad3.md)  
-### [Unidad 4. Aprendizaje no supervisado: modelos de agrupación y análisis de patrones](unidad4/unidad4.md)  
-### [Unidad 5. Redes neuronales y modelos avanzados de aprendizaje automático](unidad5/unidad5.md)  
-
-### [Relación entre Unidades y Resultados de Aprendizaje (RAs)](ras.md)  
-
-### [FAQs](faqs/faqs.md)  
+SPRINT 1 
+SPRINT 2 
+SPRINT 3 
+SPRINT 4 
+SPRINT 5 
