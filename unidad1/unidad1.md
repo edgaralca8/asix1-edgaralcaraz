@@ -84,6 +84,32 @@ Per configurar la xarxa en primera instancia podem veure la configuració a trav
 <img width="838" height="591" alt="xarxa4" src="https://github.com/user-attachments/assets/6df4d8c2-7709-4690-ad00-4fd83b4c24a0" />
 
 
+Comandes generals i instal·lacions.
+Utilitzarem el pinning packet
+
+Com podem observar tenim 2 versions de VLC disponibles, la 4.0.0 que es la candidata, i la 3.0.16. Mitjançant pinning packet farem que la candidata sigui la 3.0.16.
+
+<img width="830" height="385" alt="pining1" src="https://github.com/user-attachments/assets/9de2e709-7b9d-4016-af9d-af2095c7f82b" />
+
+<img width="824" height="67" alt="pining2" src="https://github.com/user-attachments/assets/1a062490-d1be-465f-8c69-baf36705bae9" />
+
+<img width="815" height="481" alt="pining3" src="https://github.com/user-attachments/assets/b5958445-e3db-470e-8301-13b99dc033ca" />
+
+<img width="766" height="181" alt="pining4" src="https://github.com/user-attachments/assets/41fff7cb-53eb-4dd8-9360-851ede62de15" />
+
+<img width="814" height="268" alt="pining5" src="https://github.com/user-attachments/assets/d485997d-2803-46aa-bd96-b5483f87f80b" />
+
+<img width="824" height="444" alt="pining6" src="https://github.com/user-attachments/assets/40d0109d-0cd2-4121-b744-510c28572965" />
+
+<img width="822" height="249" alt="pining7" src="https://github.com/user-attachments/assets/d4f31b92-3c48-430e-b105-14c28e2beca1" />
+
+
+
+
+
+
+
+
 
 
 
