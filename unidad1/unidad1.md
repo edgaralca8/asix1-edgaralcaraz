@@ -73,6 +73,8 @@ Selecció de la Partició: Durant l'assistent d'instal·lació de Windows, a la 
 
 <img width="994" height="691" alt="instalacio21_w" src="https://github.com/user-attachments/assets/ef2d6894-c124-4f9d-9217-a2e4c2d477f8" />
 
+Aqui com es pot veure tras realitzar la instalacio d'ubuntu podem accedir mitjançant els dispositius pero no desde l'arrancada, ja que s'ha trencat el grub d'ubuntu al instal·lar Windows, i ara arreglarem el grub d'Ubuntu per a accedir a ubuntu ja desde el boot manager.
+
 <img width="1050" height="833" alt="instalacio22_w" src="https://github.com/user-attachments/assets/27017d62-b6cc-489d-9e9e-b4b4398ae8f0" />
 
 <img width="1259" height="768" alt="instalacio23_w" src="https://github.com/user-attachments/assets/9ff7770a-3872-4d5b-80b2-ef7f42765f5a" />
