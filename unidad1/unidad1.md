@@ -129,20 +129,25 @@ Per configurar la xarxa en primera instancia podem veure la configuració a trav
 <img width="660" height="241" alt="timeshift11" src="https://github.com/user-attachments/assets/7d82810e-17fb-4b5f-b40b-b931b7055de6" />
 
 
-Comandes generals i instal·lacions.
+**Comandes generals i instal·lacions.**
 
 Utilitzarem pinning packet per a fixar la versió de la comanda nano.
 
 Primer,creem un fitxer per a les fonts
 <img width="832" height="73" alt="image" src="https://github.com/user-attachments/assets/083635fc-b572-4359-846b-e4d64181655c" />
-A
+Ara afegirem una nova font per a aconseguir una versió diferent a la que tenim actualment.
 <img width="823" height="181" alt="image" src="https://github.com/user-attachments/assets/8cb869c2-c7b8-4a50-9a2c-2d10a46fb915" />
+Fem update per a actualitzar el nou contingut afegit
 <img width="823" height="475" alt="image" src="https://github.com/user-attachments/assets/5d888fce-6d1d-401e-bfc7-d0e401d9c5e0" />
+Amb la comanda apt-cache policy i el servei que tenim comprovem que tenm la versio 6.2 i la que volem aconseguir es la 4.8
 <img width="815" height="331" alt="image" src="https://github.com/user-attachments/assets/82033c20-1437-4087-af25-208659c37ac2" />
-
+Seguidament crearem un fitxer de preferencies al següent directori /etc/apt/preferences.d
 <img width="817" height="243" alt="image" src="https://github.com/user-attachments/assets/8a74b0c6-2c7b-44b4-8e42-c093fb7b5cc6" />
+Un cop afegit aquell fitxer, la versio pendent a instal·lar es pot veure la versió 4.8 com a candidata per a instal·lar
 <img width="816" height="332" alt="image" src="https://github.com/user-attachments/assets/825c38c1-96ca-4d09-8a8a-2bd8730bbf2c" />
+Un cop aixo instal·lem el paquet
 <img width="811" height="559" alt="image" src="https://github.com/user-attachments/assets/f26bfaf4-762d-4bf5-878f-15706a093ed4" />
+Finalment comprovem que ha canviat la versió.
 <img width="828" height="318" alt="image" src="https://github.com/user-attachments/assets/7a4120df-e4ef-4445-a8f6-e1737f15b098" />
 
 
