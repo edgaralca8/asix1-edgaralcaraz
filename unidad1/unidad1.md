@@ -130,23 +130,21 @@ Per configurar la xarxa en primera instancia podem veure la configuració a trav
 
 
 Comandes generals i instal·lacions.
-Utilitzarem el pinning packet
 
-Com podem observar tenim 2 versions de VLC disponibles, la 4.0.0 que es la candidata, i la 3.0.16. Mitjançant pinning packet farem que la candidata sigui la 3.0.16.
+Utilitzarem pinning packet per a fixar la versió de la comanda nano.
 
-<img width="830" height="385" alt="pining1" src="https://github.com/user-attachments/assets/9de2e709-7b9d-4016-af9d-af2095c7f82b" />
+Primer,creem un fitxer per a les fonts
+<img width="832" height="73" alt="image" src="https://github.com/user-attachments/assets/083635fc-b572-4359-846b-e4d64181655c" />
+A
+<img width="823" height="181" alt="image" src="https://github.com/user-attachments/assets/8cb869c2-c7b8-4a50-9a2c-2d10a46fb915" />
+<img width="823" height="475" alt="image" src="https://github.com/user-attachments/assets/5d888fce-6d1d-401e-bfc7-d0e401d9c5e0" />
+<img width="815" height="331" alt="image" src="https://github.com/user-attachments/assets/82033c20-1437-4087-af25-208659c37ac2" />
 
-<img width="824" height="67" alt="pining2" src="https://github.com/user-attachments/assets/1a062490-d1be-465f-8c69-baf36705bae9" />
+<img width="817" height="243" alt="image" src="https://github.com/user-attachments/assets/8a74b0c6-2c7b-44b4-8e42-c093fb7b5cc6" />
+<img width="816" height="332" alt="image" src="https://github.com/user-attachments/assets/825c38c1-96ca-4d09-8a8a-2bd8730bbf2c" />
+<img width="811" height="559" alt="image" src="https://github.com/user-attachments/assets/f26bfaf4-762d-4bf5-878f-15706a093ed4" />
+<img width="828" height="318" alt="image" src="https://github.com/user-attachments/assets/7a4120df-e4ef-4445-a8f6-e1737f15b098" />
 
-<img width="815" height="481" alt="pining3" src="https://github.com/user-attachments/assets/b5958445-e3db-470e-8301-13b99dc033ca" />
-
-<img width="766" height="181" alt="pining4" src="https://github.com/user-attachments/assets/41fff7cb-53eb-4dd8-9360-851ede62de15" />
-
-<img width="814" height="268" alt="pining5" src="https://github.com/user-attachments/assets/d485997d-2803-46aa-bd96-b5483f87f80b" />
-
-<img width="824" height="444" alt="pining6" src="https://github.com/user-attachments/assets/40d0109d-0cd2-4121-b744-510c28572965" />
-
-<img width="822" height="249" alt="pining7" src="https://github.com/user-attachments/assets/d4f31b92-3c48-430e-b105-14c28e2beca1" />
 
 
 
