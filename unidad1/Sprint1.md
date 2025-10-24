@@ -118,6 +118,7 @@ Lògicament, el punt de partida per a aquesta implementació consisteix a efectu
 
 
 **Configuració de xarxa bàsica**
+
 Per configurar la xarxa en primera instancia podem veure la configuració a través dels paràmetres a l'opció de xarxa. Des d'aquest punt entrem a les opcions del cablejat per comprovar quina IP tenim i amb el mode manual la podem canviar al nostre gust.
 
 <img width="663" height="435" alt="timeshift8" src="https://github.com/user-attachments/assets/ed6aec22-dcf1-4f2b-938c-d701c7fb5875" />
