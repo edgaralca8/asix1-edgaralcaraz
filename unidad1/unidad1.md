@@ -1,7 +1,7 @@
 Sprint 1. Instal·lació i Configuració Base
 
 
-Virtualització i Muntatge del SO Ubuntu
+**Virtualització i Muntatge del SO Ubuntu**
 
 Aquesta primera fase se centra en la instal·lació i configuració del nostre sistema operatiu principal. Prepararem l'entorn de treball virtualitzant una instal·lació d'Ubuntu 22 mitjançant l'hipervisor VirtualBox. La màquina virtual (VM) que crearem servirà com a imatge "plantilla" que farem servir de punt de partida durant la resta del curs.
 
@@ -52,7 +52,7 @@ Partició del sistema EFI: Aquesta partició és un requisit indispensable per a
 <img width="945" height="676" alt="instalacio14" src="https://github.com/user-attachments/assets/68db8198-62bc-42a6-9e84-9273e53e03db" />
 
 
-Configuració d'Arrencada Dual (Dual-Boot) amb Windows
+**Configuració d'Arrencada Dual (Dual-Boot) amb Windows**
 Després de la configuració inicial d'Ubuntu, es va procedir a instal·lar un segon sistema operatiu (Windows 10/11) al mateix disc dur virtual. L'objectiu és crear una configuració d'arrencada dual, permetent a l'usuari triar quin sistema operatiu executar en engegar la màquina.
 
 Instal·lació de Windows: Es va muntar la imatge ISO d'instal·lació de Windows a la unitat òptica de la màquina virtual i es va reiniciar, arrencant des d'aquesta ISO.
@@ -92,7 +92,7 @@ Això és un comportament esperat, ja que l'instal·lador de Windows sobreescriu
 Aquesta situació va fer necessari el procés de reparació del gestor d'arrencada GRUB des d'un Live CD d'Ubuntu, per tal de recuperar l'accés a Ubuntu i afegir l'entrada de Windows al menú de selecció.
 
 
-TIMESHIFT
+**TIMESHIFT**
 
 
 Gestió de Punts de Restauració (Snapshots)
@@ -117,7 +117,7 @@ Lògicament, el punt de partida per a aquesta implementació consisteix a efectu
 
 
 
-Configuració de xarxa bàsica
+**Configuració de xarxa bàsica**
 Per configurar la xarxa en primera instancia podem veure la configuració a través dels paràmetres a l'opció de xarxa. Des d'aquest punt entrem a les opcions del cablejat per comprovar quina IP tenim i amb el mode manual la podem canviar al nostre gust.
 
 <img width="663" height="435" alt="timeshift8" src="https://github.com/user-attachments/assets/ed6aec22-dcf1-4f2b-938c-d701c7fb5875" />
@@ -149,10 +149,9 @@ Un cop aixo instal·lem el paquet
 <img width="811" height="559" alt="image" src="https://github.com/user-attachments/assets/f26bfaf4-762d-4bf5-878f-15706a093ed4" />
 Finalment comprovem que ha canviat la versió.
 <img width="828" height="318" alt="image" src="https://github.com/user-attachments/assets/7a4120df-e4ef-4445-a8f6-e1737f15b098" />
+**LLicenciament**
 
-
-
-
+GPL (Llicència Pública General de GNU): Aquesta és la llicència del nucli (kernel) de Linux, el cor del sistema. És una llicència "copyleft" (d'esquerra d'autor), la qual cosa significa que si modifiques el codi i el distribueixes, ho has de fer sota la mateixa llicència GPL, assegurant que continuï sent lliure.
 
 
 
