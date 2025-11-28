@@ -40,7 +40,7 @@ Blocs petits: Aprofiten millor l'espai, però el sistema ha de gestionar molts m
 FRAGMENTACIÓ INTERNA
 La fragmentació interna es produeix quan un fitxer no omple completament un bloc assignat, deixant espai sense utilitzar. Aquest espai es considera desaprofitat. La mida del bloc és clau per minimitzar aquest tipus de fragmentació. Si reduïm la mida dels blocs, es pot disminuir la fragmentació interna, però això pot impactar negativament el rendiment, ja que el sistema haurà de gestionar més blocs.
 
-Seguidament, crearem un fitxer nou anomenat hola, en el que escriurem "bon dia". Després comprovarem que existeix amb un "ls" i mostrarem el contingut per terminal amb "cat". Per demostrar la fragmentació interna executarem la comanda "du -b hola" i "du -sh hola". Podem comprovar que en la primera comanda mostra un 8 que vol dir que el fitxer ocupa 8 Bytes, en la segona comanda mostra la mida real que ocupa el fitxer, aquesta és 4Kb.
+Seguidament, crearem un fitxer nou anomenat hola, en el que escriurem "bon dia". Després comprovarem que existeix amb un "ls" i mostrarem el contingut per terminal amb "cat". Per demostrar la fragmentació interna executarem la comanda "du -b hola" i "du -sh hola". Podem comprovar que en la primera comanda mostra un 15 que vol dir que el fitxer ocupa 15 Bytes, en la segona comanda mostra la mida real que ocupa el fitxer, aquesta és 4Kb.
 
 
 echo "bon dia" > hola
@@ -55,6 +55,12 @@ du -sh hola
 
 
 <img width="798" height="359" alt="image" src="https://github.com/user-attachments/assets/3ca79d66-d908-46ac-94d1-deda905d7b2b" />
+
+
+Per últim, si revisem per GUI els paràmetres del fitxers, ens mostra 15 Bytes.
+
+<img width="515" height="651" alt="image" src="https://github.com/user-attachments/assets/c2e2dd84-8a10-475b-9b22-fa169c8d1e36" />
+
 
 
 
