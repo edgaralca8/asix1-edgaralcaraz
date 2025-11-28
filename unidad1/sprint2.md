@@ -33,6 +33,30 @@ Blocs grans: Milloren la velocitat de lectura i escriptura, però si guardem fit
 Blocs petits: Aprofiten millor l'espai, però el sistema ha de gestionar molts més fragments, la qual cosa pot afectar lleugerament el rendiment.
 
 
+<img width="789" height="139" alt="image" src="https://github.com/user-attachments/assets/de422f8a-61bf-4e3e-b911-6f2729e8fa90" />
+
+
+
+FRAGMENTACIÓ INTERNA
+La fragmentació interna es produeix quan un fitxer no omple completament un bloc assignat, deixant espai sense utilitzar. Aquest espai es considera desaprofitat. La mida del bloc és clau per minimitzar aquest tipus de fragmentació. Si reduïm la mida dels blocs, es pot disminuir la fragmentació interna, però això pot impactar negativament el rendiment, ja que el sistema haurà de gestionar més blocs.
+
+Seguidament, crearem un fitxer nou anomenat hola, en el que escriurem "bon dia". Després comprovarem que existeix amb un "ls" i mostrarem el contingut per terminal amb "cat". Per demostrar la fragmentació interna executarem la comanda "du -b hola" i "du -sh hola". Podem comprovar que en la primera comanda mostra un 8 que vol dir que el fitxer ocupa 8 Bytes, en la segona comanda mostra la mida real que ocupa el fitxer, aquesta és 4Kb.
+
+
+echo "bon dia" > hola
+
+ls
+
+cat hola
+
+du -b hola
+
+du -sh hola
+
+
+<img width="798" height="359" alt="image" src="https://github.com/user-attachments/assets/3ca79d66-d908-46ac-94d1-deda905d7b2b" />
+
+
 
 2. Gestió de processos.
 
