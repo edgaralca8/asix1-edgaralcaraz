@@ -21,7 +21,7 @@ Eina d'anàlisi: Per obtenir una radiografia detallada de les unitats connectade
 sudo fdisk -l
 <img width="839" height="654" alt="image" src="https://github.com/user-attachments/assets/721bd91b-aedc-4906-b4ab-772c026dd918" />
 <img width="790" height="551" alt="image" src="https://github.com/user-attachments/assets/1c1ab286-64f5-449e-aae6-9d3a7adcee88" />
-Aquí tens la continuació amb el text reescrit i la comanda que faltava per completar l'explicació:
+
 
 MIDA DEL BLOC (Unitat d'assignació)
 Mentre que el sector és una limitació física, el bloc és la unitat lògica fonamental que utilitza el sistema operatiu per gestionar l'espai. Aquest paràmetre no ve imposat pel fabricant, sinó que es defineix quan donem format a la partició.
