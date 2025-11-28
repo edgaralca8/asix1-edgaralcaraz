@@ -62,6 +62,10 @@ Per últim, si revisem per GUI els paràmetres del fitxers, ens mostra 15 Bytes.
 <img width="515" height="651" alt="image" src="https://github.com/user-attachments/assets/c2e2dd84-8a10-475b-9b22-fa169c8d1e36" />
 
 
+<img width="880" height="406" alt="image" src="https://github.com/user-attachments/assets/4934e8e4-5745-40b8-a528-4838cd4b5687" />
+
+
+
 
 
 2. Gestió de processos.
@@ -89,5 +93,37 @@ pstree
 
 
 3.Gestio d'usuaris, grups i permisos
+
+En sistemes GNU/Linux, la gestió d’usuaris i grups es pot fer tant des de terminal com gràficament (en entorns com GNOME o KDE). Per obtenir ajuda sobre qualsevol comanda podem utilitzar:
+
+man comanda
+# o
+comanda --help
+Exercis
+Crear usuari amb useradd
+Com podem crear un usuari completament amb useradd, lo maxim possible?
+
+Amb la comanda:
+
+sudo useradd -m -s /bin/bash -c "Merda que s'actualitza cada dia i peta" -p $(openssl passwd -6) windows10
+Paràmetres importants:
+
+-m: Crea el directori personal
+-s: Defineix l’intèrpret (ex: /bin/bash)
+-c: Afegeix informació GECOS
+-g: Defineix grup principal
+-G: Defineix grups addicionals
+-p : Defineix la contrasenya xifrada de l'usuari
+openssl passwd -6: Genera el hash SHA-512 compatible amb /etc/shadow
+
+
+<img width="1150" height="69" alt="image" src="https://github.com/user-attachments/assets/a6e22e28-6542-45fd-8c5e-0d362afcf3a4" />
+
+
+
+<img width="803" height="209" alt="image" src="https://github.com/user-attachments/assets/061f960c-1001-4a2c-ac52-dc4a5ae18842" />
+
+
+
 4. Copies de seguretat i auomatització de tasques
 5.Quotes d'usuari
