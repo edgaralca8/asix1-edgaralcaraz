@@ -19,8 +19,41 @@ El Bloc (Nivell Lògic): El sistema operatiu no sol treballar sector a sector, s
 Eina d'anàlisi: Per obtenir una radiografia detallada de les unitats connectades, l'ordre fdisk -l és fonamental. Ens permet visualitzar paràmetres com la ruta del dispositiu (/dev/sda), la capacitat total, el tipus de taula de particions (MBR o GPT) i la geometria dels sectors.
 
 sudo fdisk -l
-<img width="839" height="654" alt="image" src="https://github.com/user-attachments/assets/721bd91b-aedc-4906-b4ab-772c026dd918" />
-<img width="790" height="551" alt="image" src="https://github.com/user-attachments/assets/1c1ab286-64f5-449e-aae6-9d3a7adcee88" />
+<img width="756" height="289" alt="image" src="https://github.com/user-attachments/assets/347549e5-01c5-4b62-b619-f3e978dce563" />
+
+
+tune2fs
+
+<img width="833" height="121" alt="image" src="https://github.com/user-attachments/assets/6fd8df01-a0da-46fd-9dd1-de8f53839a9b" />
+
+edefrag
+
+<img width="812" height="351" alt="image" src="https://github.com/user-attachments/assets/93c24e02-e928-45de-96a2-12dd0aef8430" />
+
+Si volem desfragmentar és la mateixa comanda però sense el -c
+
+<img width="820" height="424" alt="image" src="https://github.com/user-attachments/assets/ae140ea5-9019-4b2c-8359-c80ffa3b0e27" />
+
+
+Particions per comandes
+Amb l'eina fdisk podem crear particions per comandes.
+
+
+<img width="865" height="609" alt="image" src="https://github.com/user-attachments/assets/b73b33ce-71b5-41b7-b8c7-d40e7a1ab050" />
+
+
+Aqui es veu la particio feta
+
+<img width="820" height="271" alt="image" src="https://github.com/user-attachments/assets/9c9e42be-ec47-4ace-85d9-5fb3294ab544" />
+
+
+Canviem la mida del bloc del sdb1, per tant, passarem la mida del bloc de 4096 a 2048.
+
+<img width="923" height="330" alt="image" src="https://github.com/user-attachments/assets/afdeb3e6-6463-4598-8020-0a895487daf5" />
+
+Comprovem que la mida del bloc s'hagicanviat correctament.
+
+<img width="886" height="158" alt="image" src="https://github.com/user-attachments/assets/2506e8d8-ceb2-483c-b383-dab485b75833" />
 
 
 MIDA DEL BLOC (Unitat d'assignació)
@@ -129,3 +162,27 @@ openssl passwd -6: Genera el hash SHA-512 compatible amb /etc/shadow
 
 4. Copies de seguretat i auomatització de tasques
 5.Quotes d'usuari
+
+
+(EXPLICACIO CLASE-CREC QUE PROCESSOS)
+pstree -p -h alumnat
+<img width="1231" height="670" alt="image" src="https://github.com/user-attachments/assets/f23542b3-3007-4902-892c-8e70d1fb3639" />
+lo mateix en root
+<img width="1090" height="629" alt="image" src="https://github.com/user-attachments/assets/2f086239-ce83-44d6-9163-ce6e6d0f7b5c" />
+en root el gnome terminal
+<img width="1198" height="211" alt="image" src="https://github.com/user-attachments/assets/173fbb2b-c41c-4525-b2aa-41abd8d9987e" />
+sense root
+<img width="1069" height="183" alt="image" src="https://github.com/user-attachments/assets/94724dc8-7e87-444f-9b81-4e7cacc35e6e" />
+
+psaux grep gnome terminal
+
+<img width="1217" height="154" alt="image" src="https://github.com/user-attachments/assets/3590a814-c612-4433-9d87-95900c74f8a1" />
+grep del alumnat i gnome terminal
+<img width="1216" height="120" alt="image" src="https://github.com/user-attachments/assets/9f901479-8870-4454-b172-2a857bb00025" />
+
+
+grep tty
+<img width="1221" height="126" alt="image" src="https://github.com/user-attachments/assets/1d0d8f29-2af7-4ded-b55d-04de4e620f1d" />
+falta el kill
+
+
