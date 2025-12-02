@@ -64,6 +64,8 @@ Per últim, si revisem per GUI els paràmetres del fitxers, ens mostra 15 Bytes.
 
 <img width="880" height="406" alt="image" src="https://github.com/user-attachments/assets/4934e8e4-5745-40b8-a528-4838cd4b5687" />
 
+PARTICIONS:
+<img width="783" height="545" alt="image" src="https://github.com/user-attachments/assets/1794796a-737a-4ed4-90cc-e596eb923d97" />
 
 
 
