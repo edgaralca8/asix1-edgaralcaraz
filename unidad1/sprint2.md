@@ -173,6 +173,12 @@ openssl passwd -6: Genera el hash SHA-512 compatible amb /etc/shadow
    PRACTICA AUTOMATITZACIÓ
    CRON
    ANACRON
+
+<img width="1072" height="327" alt="image" src="https://github.com/user-attachments/assets/18c85ce7-4908-480f-9032-a616bf39f585" />
+
+
+<img width="1069" height="307" alt="image" src="https://github.com/user-attachments/assets/995f6bd7-19b6-4a7d-b924-494aa3439b43" />
+
    
 5.Quotes d'usuari
 
