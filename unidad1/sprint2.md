@@ -161,6 +161,19 @@ openssl passwd -6: Genera el hash SHA-512 compatible amb /etc/shadow
 
 
 4. Copies de seguretat i auomatització de tasques
+  Teoria copies seguretat
+   Teoria comandes backup
+   CP
+   RSYNC
+   DD
+   PRACTICA COMANDES BACKUP
+   DEJA-DUP
+   DUPLICITY
+   TEORIA AUTOMATITZACIÓ SCRIPTS, CRON I ANACRON
+   PRACTICA AUTOMATITZACIÓ
+   CRON
+   ANACRON
+   
 5.Quotes d'usuari
 
 
