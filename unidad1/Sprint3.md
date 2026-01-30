@@ -1,6 +1,5 @@
-Aquí tens la documentació completa de les 61 captures, ordenada i amb l'explicació tècnica situada just a sobre de cada enllaç, mantenint l'espaiat que has demanat i sense numeració frontal.
+**Fase 1: Configuració de Xarxa i Sistema Base** 
 
-Fase 1: Configuració de Xarxa i Sistema Base
 Establiment d'una adreça de xarxa fixa (10.0.2.15) per assegurar la disponibilitat permanent del servei LDAP.
 
 <img width="582" height="477" alt="1png" src="https://github.com/user-attachments/assets/9cffe83c-0c68-4b95-ae9a-f23e4b699a09" />
@@ -16,7 +15,8 @@ Actualització de la taula de resolució local (/etc/hosts) per associar la IP a
 <img width="684" height="304" alt="3" src="https://github.com/user-attachments/assets/0893eed3-d61b-40b1-bcff-c0fe2df92967" />
 
 
-Fase 2: Instal·lació i Reconfiguració de slapd
+**Fase 2: Instal·lació i Reconfiguració de slapd**
+
 Instal·lació dels binaris del servidor slapd i les utilitats de gestió ldap-utils.
 
 <img width="742" height="295" alt="4" src="https://github.com/user-attachments/assets/1bea228f-82f6-4608-83ea-e864adf7422c" />
@@ -51,7 +51,8 @@ Confirmació final del desplegament del nou directori i la seva base de dades as
 <img width="1021" height="171" alt="10" src="https://github.com/user-attachments/assets/b5752d48-551d-4eed-a0b4-d1e016b425f9" />
 
 
-Fase 3: Disseny d'Estructura i Primers Registres (LDIF)
+**Fase 3: Disseny d'Estructura i Primers Registres (LDIF)**
+
 Definició de la Unitat Organitzativa (OU) destinada als usuaris en un fitxer de text LDIF.
 
 <img width="1194" height="260" alt="11" src="https://github.com/user-attachments/assets/92401d72-9e7d-4ad5-bbb4-79e42c4ed6f1" />
@@ -76,7 +77,7 @@ Inclusió del grup i vinculació dels membres dins de l'estructura LDAP.
 <img width="1122" height="210" alt="15" src="https://github.com/user-attachments/assets/c1fd722f-2b76-4d35-8244-c1ceacb70d95" />
 
 
-Fase 4: Preparació de la Màquina Client
+**Fase 4: Preparació de la Màquina Client**
 
 Validació de la connexió entre màquines mitjançant la traça de paquets ICMP (ping).
 
@@ -117,7 +118,7 @@ Confirmació del compte d'usuari per a consultes de base de dades.
 <img width="1157" height="376" alt="23c" src="https://github.com/user-attachments/assets/62aebe4e-3096-4b5e-951e-c2e778e03e6b" />
 
 
-Fase 5: Integració d'Autenticació i Entorn Gràfic
+**Fase 5: Integració d'Autenticació i Entorn Gràfic**
 
 Modificació del servei de noms (/etc/nsswitch.conf) per prioritzar les consultes LDAP.
 
@@ -149,7 +150,7 @@ Demostració d'inici de sessió efectiu en una sessió de terminal de client.
 <img width="819" height="215" alt="29c" src="https://github.com/user-attachments/assets/830aa215-7f32-4a3e-b7d3-7f350e7637c4" />
 
 
-Fase 6: Panell de Control Web (LAM)
+**Fase 6: Panell de Control Web (LAM)**
 
 Implementació de l'eina LDAP Account Manager per facilitar la gestió visual.
 
@@ -215,7 +216,7 @@ Prova de reconeixement al client: l'usuari creat via web ja és accessible pel s
 <img width="818" height="89" alt="42" src="https://github.com/user-attachments/assets/7eedc466-1c3d-4e2a-8cb4-19e113bd22cd" />
 
 
-Fase 7: Explotació de Dades i Operacions Avançades
+**Fase 7: Explotació de Dades i Operacions Avançades**
 
 Validació de la identitat d'usuari actiu en l'entorn de treball mitjançant l'ordre whoami.
 
