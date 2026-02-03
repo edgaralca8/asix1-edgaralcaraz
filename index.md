@@ -17,7 +17,7 @@ El contenido está bajo licencia [Creative Commons BY-NC-SA 4.0 ES](LICENSE.md).
 
 #### [Sprint1](unidad1/Sprint1.md)
 
-#### [Sprint2](unidad1/Sprint2.md)
+#### [Sprint2](unidad1/sprint2.md)
 
 #### [Sprint3](unidad1/Sprint3.md)
 
