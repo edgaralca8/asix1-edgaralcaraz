@@ -19,6 +19,8 @@ El Bloc (Nivell Lògic): El sistema operatiu no sol treballar sector a sector, s
 Eina d'anàlisi: Per obtenir una radiografia detallada de les unitats connectades, l'ordre fdisk -l és fonamental. Ens permet visualitzar paràmetres com la ruta del dispositiu (/dev/sda), la capacitat total, el tipus de taula de particions (MBR o GPT) i la geometria dels sectors.
 
 sudo fdisk -l
+
+
 <img width="756" height="289" alt="image" src="https://github.com/user-attachments/assets/347549e5-01c5-4b62-b619-f3e978dce563" />
 
 
@@ -26,11 +28,15 @@ tune2fs
 
 <img width="833" height="121" alt="image" src="https://github.com/user-attachments/assets/6fd8df01-a0da-46fd-9dd1-de8f53839a9b" />
 
+
 edefrag
+
 
 <img width="812" height="351" alt="image" src="https://github.com/user-attachments/assets/93c24e02-e928-45de-96a2-12dd0aef8430" />
 
+
 Si volem desfragmentar és la mateixa comanda però sense el -c
+
 
 <img width="820" height="424" alt="image" src="https://github.com/user-attachments/assets/ae140ea5-9019-4b2c-8359-c80ffa3b0e27" />
 
@@ -44,14 +50,18 @@ Amb l'eina fdisk podem crear particions per comandes.
 
 Aqui es veu la particio feta
 
+
 <img width="820" height="271" alt="image" src="https://github.com/user-attachments/assets/9c9e42be-ec47-4ace-85d9-5fb3294ab544" />
 
 
 Canviem la mida del bloc del sdb1, per tant, passarem la mida del bloc de 4096 a 2048.
 
+
 <img width="923" height="330" alt="image" src="https://github.com/user-attachments/assets/afdeb3e6-6463-4598-8020-0a895487daf5" />
 
-Comprovem que la mida del bloc s'hagicanviat correctament.
+
+Comprovemque la mida del bloc s'hagicanviat correctament.
+
 
 <img width="886" height="158" alt="image" src="https://github.com/user-attachments/assets/2506e8d8-ceb2-483c-b383-dab485b75833" />
 
