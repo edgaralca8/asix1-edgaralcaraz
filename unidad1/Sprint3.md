@@ -312,3 +312,64 @@ Prova d'esborrat de grups organitzatius i validació de la seva desaparició def
 
 <img width="881" height="259" alt="61" src="https://github.com/user-attachments/assets/d528e835-ab8f-40c7-a183-47bf2a80d869" />
 
+
+Aquí tens la documentació detallada de la configuració del servidor de fitxers Samba a Ubuntu, ordenada del pas 1 al 10 en català, amb els enllaços corresponents i la separació de dos salts de línia:
+
+Instal·lació del servei Samba mitjançant l'ordre apt install samba, descarregant tots els paquets i dependències necessaris per a la gestió de fitxers compartits en xarxa.
+
+<img width="738" height="383" alt="SAMBA1" src="https://github.com/user-attachments/assets/2c127009-ccee-4b56-b7dd-cd20b5bd8838" />
+
+Creació del directori de compartició anomenat "asixa" a l'arrel del sistema, assignació de permisos totals (777) i canvi del propietari al grup "nobody" per permetre l'accés correcte.
+
+<img width="748" height="242" alt="SAMBA2" src="https://github.com/user-attachments/assets/845aff0b-951a-4ff0-b980-8dfa8608d984" />
+
+Creació dels usuaris locals (edgar, naim, eros) amb el paràmetre -s /sbin/nologin per seguretat, creació del grup "madrid" i addició dels usuaris corresponents a aquest grup.
+
+<img width="805" height="344" alt="SAMBA3" src="https://github.com/user-attachments/assets/9f560b9d-7ef9-48ce-943e-4de1286dedee" />
+
+Configuració del recurs compartit al fitxer smb.conf, definint la ruta, els permisos d'escriptura, l'accés de convidats i les llistes d'usuaris permesos i invàlids (edgar).
+
+<img width="668" height="257" alt="SAMBA4" src="https://github.com/user-attachments/assets/fc400df2-a577-494f-84f7-3ea397f2e4a8" />
+
+Reinici dels serveis smbd i nmbd per aplicar els canvis, i verificació de l'estat dels dimonis per confirmar que el servidor Samba està actiu i funcionant correctament.
+
+<img width="719" height="243" alt="SAMBA5 5" src="https://github.com/user-attachments/assets/7c0548b4-e5c5-4220-874f-4b27c88e6785" />
+
+Instal·lació de l'eina smbclient al terminal per poder realitzar proves de connexió i llistar els recursos compartits disponibles des del propi client.
+
+<img width="814" height="67" alt="SAMBA6" src="https://github.com/user-attachments/assets/2f4cd7f0-e1c0-4dfd-b9c2-b378075aac77" />
+
+Connexió al recurs compartit des de l'explorador de fitxers d'Ubuntu mitjançant el protocol smb://10.0.2.15/asixa, localitzant el servidor anomenat "EDGARSERVER".
+
+<img width="885" height="554" alt="SAMBA7" src="https://github.com/user-attachments/assets/c7a18cd7-945a-422f-a3b5-0b1c28d0f365" />
+
+Accés satisfactori al directori "asixa", confirmant que la carpeta es troba inicialment buida i que el lligam amb el servidor s'ha establert de forma correcta.
+
+<img width="890" height="547" alt="SAMBA8" src="https://github.com/user-attachments/assets/f56ffe79-4429-4305-9222-f093c83cee55" />
+
+Prova d'escriptura al recurs compartit creant una nova carpeta anomenada "ANONIM" per verificar que els permisos de creació definits a la configuració funcionen.
+
+<img width="885" height="545" alt="SAMBA9" src="https://github.com/user-attachments/assets/b910bdd2-360a-4bf4-ac8d-36591dffa1fb" />
+
+Verificació final de l'estructura de fitxers al servidor Samba, mostrant la carpeta "ANONIM" creada des del client, el que valida tota la configuració del servei.
+
+<img width="886" height="547" alt="SAMBA10" src="https://github.com/user-attachments/assets/eb856adc-7647-4bc7-b40d-93f467a640c5" />
+Assignació de contrasenyes de Samba per als usuaris edgar, naim i eros mitjançant l'ordre smbpasswd -a, permetent així la seva autenticació des de clients externs.
+
+<img width="888" height="551" alt="SAMBA11" src="https://github.com/user-attachments/assets/d27a753f-197d-4efb-8411-63d911a0b7d8" />
+
+Inici de sessió al recurs compartit amb l'usuari "naim", introduint les credencials configurades prèviament per accedir als privilegis d'escriptura definits al fitxer smb.conf.
+
+<img width="893" height="550" alt="SAMBA12" src="https://github.com/user-attachments/assets/b97d7333-7ee5-4929-a0f5-5fb694947093" />
+
+Creació d'una nova carpeta anomenada "NAIM" dins del recurs compartit, acció permesa ja que l'usuari "naim" es troba a la write list de la configuració de Samba.
+
+<img width="890" height="558" alt="SAMBA13" src="https://github.com/user-attachments/assets/3b30386b-78ec-43c4-b1e8-f18eec08810b" />
+
+Canvi d'usuari al client per accedir com a "eros", qui forma part del grup "madrid" i té permisos de lectura al recurs, però no d'escriptura individual.
+
+<img width="893" height="549" alt="SAMBA14" src="https://github.com/user-attachments/assets/07d9d7bd-003e-42be-8f30-612cf4628b23" />
+
+Comprovació de la denegació de permisos: en intentar crear el directori "EROS", el sistema mostra un error ja que l'usuari no té privilegis d'escriptura, validant així la configuració de seguretat.
+
+<img width="886" height="546" alt="SAMBA15" src="https://github.com/user-attachments/assets/58723c1b-3866-4923-bf5d-44fb5bafedfd" />
