@@ -1,4 +1,4 @@
-**Servidor actualitzacions**
+**SERVIDOR D'ACTUALITZACIONS**
 
 
 
@@ -43,7 +43,7 @@ Execució de apt install google-chrome-stable. Es confirma que el procés és co
 <img width="854" height="661" alt="8" src="https://github.com/user-attachments/assets/c01502a6-3a16-4e79-bd18-a0af50266231" />
 
 
-**SERVIDOR **
+**RAIDS**
 
 Instal·lació de l'eina mdadm, necessària per a la gestió i administració de dispositius RAID mitjançant programari a Linux.
 
@@ -157,7 +157,7 @@ Finalització de la sincronització i verificació final. Un cop acabat el proc�
 
 
 
-**RAIDS**
+**LOGS**
 
 
 Accés al directori /var/log i llistat del seu contingut. S'observen els diferents fitxers de registre del sistema (syslog, auth.log, kern.log) i com alguns ja presenten numeració (.1, .2.gz), indicant que han estat rotats prèviament.
