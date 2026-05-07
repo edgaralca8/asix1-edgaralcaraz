@@ -42,7 +42,6 @@ Un cop generat el nostre punt de restauració manual, hem realitzat un canvi vis
 <img width="568" height="462" alt="image" src="https://github.com/user-attachments/assets/a5312997-15fa-4ada-bfeb-303148e5d4a2" />
 
 
-<img width="1019" height="842" alt="image" src="https://github.com/user-attachments/assets/1e00a120-45d6-452c-bbee-9261396c24e4" />
 
 <img width="470" height="231" alt="image" src="https://github.com/user-attachments/assets/1e548e06-bb9d-4916-bb11-e3cd9201520c" />
 
@@ -68,3 +67,76 @@ Pel que fa als preus oficials a la botiga de Microsoft per a Espanya actualment:
 Una llicència oficial de Windows 11 Pro (o Pro N) costa 259,00 €.
 
 Una llicència oficial de Windows 11 Home (o Home N) costa 145,00 €.
+
+
+
+Fase 4 - Gestor d'arrencada
+
+Executant bcdedit amb permisos d'administrador, hem visualitzat els blocs del gestor d'arrencada. El Boot Manager decideix el temps d'espera (timeout) i quin sistema arrenca per defecte, mentre que el Boot Loader indica a quina partició (C:) i amb quin fitxer (winload.efi) es carrega el Windows 11 .  
+
+<img width="846" height="647" alt="image" src="https://github.com/user-attachments/assets/f06fc076-b045-407d-87c9-c78318609658" />
+
+**Quin sistema s'està arrencant?** S'està arrencant el Windows 10 (tal com indica l'apartat description del Cargador d'arrencada).
+
+**A quin disc o partició està instal·lat?** Està instal·lat a la partició C: (com indica el paràmetre device).
+
+**Quant temps espera abans d'arrencar?** Espera 30 segons (determinat pel paràmetre timeout a l'Administrador d'arrencada).
+
+**Quin fitxer inicia Windows?** El fitxer encarregat d'iniciar-lo és \Windows\system32\winload.exe (indicat al paràmetre path).
+
+
+**Qui decideix l'arrencada (Boot Manager):** L'"Administrador de arranque de Windows" és qui controla el menú de selecció, el temps d'espera (timeout) i estableix quin sistema s'inicia per defecte.
+
+**Qui carrega el sistema (Boot Loader):** El "Cargador de arranque de Windows" és qui pren el relleu, busca a la partició corresponent (C:) el fitxer exacte d'inici (winload.exe) i carrega el sistema operatiu a la memòria.
+
+
+Guia Pràctica: Fase 5 - Xarxa bàsica
+
+
+Per iniciar la configuració de xarxa, el primer pas ha estat obrir la configuració del sistema i paral·lelament consultar l'estat actual de la nostra connexió. Executant la comanda ipconfig al Símbol del sistema, hem obtingut les dades bàsiques assignades a la nostra màquina virtual (adreça IP, màscara i porta d'enllaç).  
+
+<img width="837" height="295" alt="image" src="https://github.com/user-attachments/assets/e7b440b5-848a-453a-8f85-ed441b9e55ac" />
+
+
+
+
+Hem accedit a les propietats de l'adaptador de xarxa per modificar l'assignació d'IP del protocol IPv4. Després de verificar que el sistema utilitzava una assignació dinàmica (DHCP automàtic) , ho hem canviat a una configuració d'IP fixa, introduint manualment la nova adreça, la màscara de subxarxa, la porta d'enllaç i els servidors DNS.  
+
+
+<img width="439" height="467" alt="image" src="https://github.com/user-attachments/assets/dd025666-6127-4c85-a74d-3a31c70c5f54" />
+
+
+<img width="420" height="469" alt="image" src="https://github.com/user-attachments/assets/a139c67a-44fc-4d55-aff5-00e555c24b28" />
+
+
+<img width="718" height="268" alt="image" src="https://github.com/user-attachments/assets/29eae587-1c53-4ff9-9553-9e988115c13e" />
+
+
+Guia Pràctica: Fase 6 - Comandes generals
+
+
+Hem iniciat l'entorn PowerShell. A diferència del cmd clàssic, PowerShell és molt més potent, ja que permet treballar amb objectes i automatitzar tasques complexes . En aquesta primera part, hem provat les comandes bàsiques de gestió de fitxers creant un directori (mkdir), desplaçant-nos-hi (cd), creant un fitxer (echo), llistant el contingut (dir) i finalment eliminant l'arxiu creat (del) .
+
+<img width="861" height="562" alt="image" src="https://github.com/user-attachments/assets/0bbe6ffd-77ea-4c93-ae3b-86f8815a5889" />
+
+Hem procedit a l'execució de comandes d'administració del sistema. Hem identificat l'equip i l'usuari amb hostname i whoami, hem consultat les característiques del maquinari amb systeminfo, i hem gestionat aplicacions actives llistant-les amb tasklist i forçant el seu tancament amb taskkill . Addicionalment, hem provat les comandes de xarxa per comprovar l'estat d'IP (ipconfig), connexió exterior (ping) i ports oberts (netstat -an) .  
+
+<img width="915" height="725" alt="image" src="https://github.com/user-attachments/assets/5caa6a52-741b-4ce4-b5a3-24ac9c10e2fd" />
+
+
+<img width="709" height="639" alt="image" src="https://github.com/user-attachments/assets/5d136568-1936-43d3-9d17-ed4d1045d5d6" />
+
+
+<img width="500" height="115" alt="image" src="https://github.com/user-attachments/assets/009ed395-fed7-44d6-825f-76ecd4619a91" />
+
+
+<img width="474" height="174" alt="image" src="https://github.com/user-attachments/assets/ac5ebff6-53b2-4c9c-99f5-c09747550900" />
+
+<img width="924" height="679" alt="image" src="https://github.com/user-attachments/assets/abf31e87-8be7-4056-8f22-fe1712155362" />
+
+<img width="636" height="258" alt="image" src="https://github.com/user-attachments/assets/63925cfb-b37a-4446-b957-6b303da6d58a" />
+
+
+<img width="916" height="679" alt="image" src="https://github.com/user-attachments/assets/df9e6080-e9cf-4310-8873-23b5916688cb" />
+
+
