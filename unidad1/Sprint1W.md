@@ -74,7 +74,9 @@ Fase 4 - Gestor d'arrencada
 
 Executant bcdedit amb permisos d'administrador, hem visualitzat els blocs del gestor d'arrencada. El Boot Manager decideix el temps d'espera (timeout) i quin sistema arrenca per defecte, mentre que el Boot Loader indica a quina partició (C:) i amb quin fitxer (winload.efi) es carrega el Windows 11 .  
 
+
 <img width="846" height="647" alt="image" src="https://github.com/user-attachments/assets/f06fc076-b045-407d-87c9-c78318609658" />
+
 
 **Quin sistema s'està arrencant?** S'està arrencant el Windows 10 (tal com indica l'apartat description del Cargador d'arrencada).
 
@@ -106,7 +108,9 @@ Hem accedit a les propietats de l'adaptador de xarxa per modificar l'assignació
 <img width="439" height="467" alt="image" src="https://github.com/user-attachments/assets/dd025666-6127-4c85-a74d-3a31c70c5f54" />
 
 
+
 <img width="420" height="469" alt="image" src="https://github.com/user-attachments/assets/a139c67a-44fc-4d55-aff5-00e555c24b28" />
+
 
 
 <img width="718" height="268" alt="image" src="https://github.com/user-attachments/assets/29eae587-1c53-4ff9-9553-9e988115c13e" />
@@ -124,7 +128,9 @@ Hem procedit a l'execució de comandes d'administració del sistema. Hem identif
 <img width="915" height="725" alt="image" src="https://github.com/user-attachments/assets/5caa6a52-741b-4ce4-b5a3-24ac9c10e2fd" />
 
 
+
 <img width="709" height="639" alt="image" src="https://github.com/user-attachments/assets/5d136568-1936-43d3-9d17-ed4d1045d5d6" />
+
 
 
 <img width="500" height="115" alt="image" src="https://github.com/user-attachments/assets/009ed395-fed7-44d6-825f-76ecd4619a91" />
@@ -132,9 +138,14 @@ Hem procedit a l'execució de comandes d'administració del sistema. Hem identif
 
 <img width="474" height="174" alt="image" src="https://github.com/user-attachments/assets/ac5ebff6-53b2-4c9c-99f5-c09747550900" />
 
+
+
 <img width="924" height="679" alt="image" src="https://github.com/user-attachments/assets/abf31e87-8be7-4056-8f22-fe1712155362" />
 
+
+
 <img width="636" height="258" alt="image" src="https://github.com/user-attachments/assets/63925cfb-b37a-4446-b957-6b303da6d58a" />
+
 
 
 <img width="916" height="679" alt="image" src="https://github.com/user-attachments/assets/df9e6080-e9cf-4310-8873-23b5916688cb" />
