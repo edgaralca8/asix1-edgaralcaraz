@@ -151,3 +151,69 @@ Hem procedit a l'execució de comandes d'administració del sistema. Hem identif
 <img width="916" height="679" alt="image" src="https://github.com/user-attachments/assets/df9e6080-e9cf-4310-8873-23b5916688cb" />
 
 
+
+Finalment, hem visualitzat de forma gràfica l'estructura de directoris de l'equip utilitzant la instrucció tree. També hem netejat la consola amb cls i hem obert la documentació del sistema amb help . La comanda shutdown /s /t 999 permetria apagar en 999 segons l'equip, però hem omès la seva execució per poder continuar amb la pràctica.  
+
+<img width="783" height="317" alt="image" src="https://github.com/user-attachments/assets/abcec7f9-8635-495c-9c66-8695e50e828a" />
+
+
+<img width="936" height="691" alt="image" src="https://github.com/user-attachments/assets/325ed134-219e-4317-8dd1-eea0c7b6e260" />
+
+
+<img width="924" height="394" alt="image" src="https://github.com/user-attachments/assets/9074ff51-60ba-460c-8069-75e1bff6460a" />
+
+
+
+**Què mostra tasklist:** Aquesta comanda mostra una llista completa de tots els processos i aplicacions que s'estan executant actualment a la memòria de l'equip, associats al seu corresponent identificador (PID).
+
+
+
+**Què mostra ipconfig:** Aquesta eina ens mostra els valors de configuració de xarxa actuals del protocol TCP/IP per a tots els adaptadors (targetes de xarxa i Wi-Fi), indicant l'adreça IPv4, la màscara de subxarxa i la porta d'enllaç predeterminada.
+
+
+**Què mostra systeminfo:** Aquesta instrucció mostra informació summament detallada sobre la configuració i l'estat del sistema operatiu i del maquinari de l'equip, incloent dades com el processador, la memòria RAM física, la data d'instal·lació del sistema i els pedaços de seguretat aplicats.
+
+
+
+
+
+
+Guia Pràctica: Fase 7 - Instal·lació d'aplicacions
+
+
+A la fase final d'instal·lació de programari, hem descarregat un executable estàndard des del navegador web. Mitjançant el seu assistent d'instal·lació clàssic hem configurat els paràmetres bàsics i copiat els fitxers al disc dur, per acabar obrint l'aplicació i certificant que s'executa correctament.
+
+
+<img width="939" height="728" alt="image" src="https://github.com/user-attachments/assets/577cbf41-7ffc-4b44-9381-46d294f82080" />
+
+
+<img width="594" height="467" alt="image" src="https://github.com/user-attachments/assets/fc1934a2-eb73-46f8-8871-3a8d64e67d9f" />
+
+
+<img width="929" height="720" alt="image" src="https://github.com/user-attachments/assets/38c78d0c-40be-4a5b-8d00-131a98302fce" />
+
+
+Com a via alternativa i moderna, hem posat a prova el gestor de paquets natiu del sistema utilitzant la Microsoft Store. Hem buscat, descarregat i instal·lat una aplicació gratuïta des del repositori oficial, validant finalment la seva correcta arrencada un cop completat el procés automatitzat.
+
+<img width="791" height="630" alt="image" src="https://github.com/user-attachments/assets/e67cde99-6f40-483f-8ffd-7d973d5a213a" />
+
+
+
+<img width="801" height="625" alt="image" src="https://github.com/user-attachments/assets/dbc99725-494e-4652-b9c3-c137bf672d2c" />
+
+
+
+<img width="908" height="766" alt="image" src="https://github.com/user-attachments/assets/a2ec0473-f8ef-4653-ba22-79e41f75f1d7" />
+
+
+
+Per concloure, s'ha procedit a l'eliminació segura del programari a través de l'entorn de Configuració i Aplicacions del sistema. Després d'executar la desinstal·lació formal, s'ha fet una cerca global i s'ha verificat que l'aplicació ha desaparegut del llistat i els seus fitxers s'han eliminat del disc de manera efectiva.
+
+
+<img width="940" height="771" alt="image" src="https://github.com/user-attachments/assets/e729cbd9-30fc-4036-822a-f7b5b5335106" />
+
+
+<img width="930" height="764" alt="image" src="https://github.com/user-attachments/assets/2093adee-f026-49a3-b887-bba1c2002d78" />
+
+
+<img width="875" height="697" alt="image" src="https://github.com/user-attachments/assets/fdd2d9c9-0e8b-4518-8050-2013da7a74ea" />
