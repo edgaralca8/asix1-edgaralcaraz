@@ -58,5 +58,13 @@ Per comprovar l'estat legal del nostre sistema operatiu, hem accedit a l'apartat
 
 Hem executat la comanda slmgr /xpr a través del cmd per esbrinar el tipus de llicenciament de l'equip, el qual hem detallat a l'informe. A més, consultant botigues oficials, hem determinat el preu aproximat d'una llicència original.  
 
-<img width="851" height="525" alt="image" src="https://github.com/user-attachments/assets/0d14bda0-db37-4158-a3a6-801df6117023" />
+La lletra "N" significa que és una versió especial per al mercat europeu que ve sense el Windows Media Player preinstal·lat (per complir amb lleis antimonopoli), i la part d'Educació indica que és una variant de la versió Pro dissenyada per a entorns acadèmics. El "modo de notificación" (mode de notificació) vol dir que el Windows no està activat. El període de prova ha caducat o no s'ha introduït cap clau de producte vàlida i, per tant, el sistema començarà a llançar avisos i marques d'aigua demanant que l'activis.
 
+<img width="836" height="340" alt="image" src="https://github.com/user-attachments/assets/fab579c2-1b15-48ef-a1d7-388c8cfb8719" />
+
+
+Pel que fa als preus oficials a la botiga de Microsoft per a Espanya actualment:
+
+Una llicència oficial de Windows 11 Pro (o Pro N) costa 259,00 €.
+
+Una llicència oficial de Windows 11 Home (o Home N) costa 145,00 €.
