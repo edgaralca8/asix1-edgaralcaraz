@@ -106,3 +106,32 @@ Després d'incorporar i formatar en NTFS un tercer disc exclusiu per a Backups ,
 
 
 **Fase 5 - Gestió de processos i serveis**
+
+
+Utilitzant la comanda tasklist, hem exportat a un arxiu de text tots els processos generats en l'inici de sessió . Hem identificat elements no essencials, com els processos de sincronització al núvol, i els hem aturat inicialment de manera manual amb taskkill, per després automatitzar el seu tancament afegint aquestes instruccions a l'script d'inici de sessió .  
+
+
+<img width="917" height="504" alt="image" src="https://github.com/user-attachments/assets/ec098edc-7a84-47a8-9507-e5c9e7646dc6" />
+
+
+<img width="914" height="467" alt="image" src="https://github.com/user-attachments/assets/c7f77512-7470-4c03-900d-51e9d7075b45" />
+
+
+<img width="881" height="669" alt="image" src="https://github.com/user-attachments/assets/5d6e6a8f-c1b4-48ae-911f-8bf98d216923" />
+
+
+<img width="884" height="717" alt="image" src="https://github.com/user-attachments/assets/4caf7427-d075-4bb8-8800-6cabd9b60f0f" />
+
+
+<img width="763" height="522" alt="image" src="https://github.com/user-attachments/assets/306dcf25-540f-43c9-9eed-aa84127d0949" />
+
+
+<img width="921" height="765" alt="image" src="https://github.com/user-attachments/assets/e0e43f81-c7c7-4bbb-9e74-d4c93c857832" />
+
+
+Eliminar de forma controlada un procés crític com explorer.exe atura completament la interfície gràfica de l'usuari (desapareix la barra de tasques i l'escriptori), tot i que el sistema continua actiu. Aquesta neteja de processos secundaris o innecessaris resulta vital per alliberar memòria RAM i processador, millorant dràsticament el rendiment en entorns virtualitzats o amb recursos limitats.
+
+
+
+<img width="922" height="703" alt="image" src="https://github.com/user-attachments/assets/06eb89d1-cdd2-423f-9962-da82f8ad1149" />
+
