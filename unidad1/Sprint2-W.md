@@ -103,3 +103,6 @@ Després d'incorporar i formatar en NTFS un tercer disc exclusiu per a Backups ,
 
 
 <img width="1017" height="832" alt="image" src="https://github.com/user-attachments/assets/090dc53e-f6bf-468e-ba36-3c45febba730" />
+
+
+**Fase 5 - Gestió de processos i serveis**
