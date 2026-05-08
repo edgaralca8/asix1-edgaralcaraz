@@ -1,5 +1,8 @@
 
 
+A l'inici d'aquest Sprint, hem preparat l'entorn afegint un nou disc virtual a la nostra màquina. Mitjançant la Gestió de discs, l'hem inicialitzat i dividit en dues particions independents: una anomenada "Dades" formatada en NTFS, i una altra anomenada "Portable" sota el sistema de fitxers FAT32. L'assignació correcta de lletres s'ha verificat posteriorment amb l'eina de consola diskpart.
+
+
 <img width="1028" height="609" alt="image" src="https://github.com/user-attachments/assets/60259873-3d02-45f6-b9ef-d96f9aca48df" />
 
 
@@ -16,9 +19,15 @@
 
 <img width="493" height="392" alt="image" src="https://github.com/user-attachments/assets/ba5975f0-1750-40f3-85de-7a810e21a209" />
 
+<img width="493" height="392" alt="image" src="https://github.com/user-attachments/assets/babc94f1-917e-4880-81b2-a9d7a9462e61" />
 
 
-<img width="498" height="397" alt="image" src="https://github.com/user-attachments/assets/7bc727a0-95da-4718-a1d7-4d3038de54d6" />
+<img width="494" height="392" alt="image" src="https://github.com/user-attachments/assets/b90e8687-1293-45a1-82c0-41858141e32e" />
 
 
-<img width="787" height="614" alt="image" src="https://github.com/user-attachments/assets/5ac1dcb5-d01f-4516-9325-fd8ef96324f5" />
+<img width="775" height="624" alt="image" src="https://github.com/user-attachments/assets/39925f71-3681-4090-b5fc-985c7e5e763b" />
+
+
+<img width="828" height="496" alt="image" src="https://github.com/user-attachments/assets/82b1cc36-22ec-4cc3-bdff-4378bfba3508" />
+
+
