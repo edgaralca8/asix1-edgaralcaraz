@@ -132,6 +132,29 @@ Utilitzant la comanda tasklist, hem exportat a un arxiu de text tots els process
 Eliminar de forma controlada un procés crític com explorer.exe atura completament la interfície gràfica de l'usuari (desapareix la barra de tasques i l'escriptori), tot i que el sistema continua actiu. Aquesta neteja de processos secundaris o innecessaris resulta vital per alliberar memòria RAM i processador, millorant dràsticament el rendiment en entorns virtualitzats o amb recursos limitats.
 
 
+**Fase 6 - Gestió de permisos (ACLs)**
+
+
+Mitjançant l'ús avançat de les Llistes de Control d'Accés (ACL) , s'ha blindat la carpeta Projectes retirant-ne l'herència predeterminada del disc. S'ha configurat una regla concedint accés total al grup Limitats , que hem validat exitosament amb l'alumne1 . Posteriorment, utilitzant la comanda icacls, hem generat una ACE (Access Control Entry) específica d'excepció per a l'alumne2 , sobrescrivint els seus drets de grup i atorgant-li únicament privilegis de lectura, fet que ens ha permès denegar qualsevol intent d'escriptura per part d'aquest compte .  
+
 
 <img width="922" height="703" alt="image" src="https://github.com/user-attachments/assets/06eb89d1-cdd2-423f-9962-da82f8ad1149" />
 
+
+<img width="1009" height="751" alt="image" src="https://github.com/user-attachments/assets/39a62cb7-a09c-4045-829c-336f3243b84a" />
+
+<img width="923" height="605" alt="image" src="https://github.com/user-attachments/assets/7c3a0bc8-daf3-4f56-b00a-8ec096613337" />
+
+Cambiem d'usari a edgar1
+
+<img width="890" height="659" alt="image" src="https://github.com/user-attachments/assets/7609252a-2d3a-4816-93d5-278c2ca4e8ac" />
+
+
+<img width="855" height="530" alt="image" src="https://github.com/user-attachments/assets/a31dd101-652e-4e9f-9122-7c2a0da5eaa9" />
+
+<img width="782" height="251" alt="image" src="https://github.com/user-attachments/assets/6ee60eb6-dd39-4b99-946b-2e2ba9f0280d" />
+
+
+<img width="877" height="643" alt="image" src="https://github.com/user-attachments/assets/4b47559d-30fe-46cf-ad78-3437078a6f48" />
+
+<img width="917" height="675" alt="image" src="https://github.com/user-attachments/assets/c9dcfc07-7bef-46fb-86f5-62b3a3a446c0" />
