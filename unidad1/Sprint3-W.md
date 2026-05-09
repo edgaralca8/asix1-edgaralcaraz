@@ -59,3 +59,16 @@ Hem forçat la simulació d'una segona fallada consecutiva desconnectant un altr
 <img width="1633" height="905" alt="image" src="https://github.com/user-attachments/assets/f27bd2b2-0d78-4433-8057-41b753623ef8" />
 
 
+
+**Recuperació del sistema**
+
+Finalment, hem procedit a la recuperació del volum tornant a posar en línia la unitat fallida. El sistema operatiu ha detectat el retorn del disc i ha iniciat automàticament el procés de reconstrucció (Resynching) basat en la informació de paritat. Un cop recuperat l'estat degradat/operatiu, hem comprovat que la integritat dels fitxers inicials s'ha mantingut inalterada.
+
+
+<img width="1633" height="897" alt="image" src="https://github.com/user-attachments/assets/207204b3-e510-49af-bbfd-be0ba5d7f168" />
+
+
+
+<img width="1658" height="925" alt="image" src="https://github.com/user-attachments/assets/a9e09709-53ed-493b-9e4b-b032eacbbb9e" />
+
+
