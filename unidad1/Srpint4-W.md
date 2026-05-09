@@ -63,6 +63,10 @@ Creacio
 <img width="420" height="392" alt="image" src="https://github.com/user-attachments/assets/ab650d0e-89e3-4602-a92d-a723ebdfa239" />
 
 
+
+<img width="925" height="920" alt="image" src="https://github.com/user-attachments/assets/def19044-d56e-4926-93c6-a1a47c2ca29a" />
+
+
 Deshabilitada
 
 <img width="446" height="520" alt="image" src="https://github.com/user-attachments/assets/cacebea6-cb94-4ad5-aeee-dcbe74bd4109" />
@@ -73,6 +77,13 @@ Deshabilitada
 
 
 
-Eliminar Log
+Eliminada
+
+
+<img width="515" height="284" alt="image" src="https://github.com/user-attachments/assets/e13b9f05-b682-4d6c-a045-1d51fda9d990" />
+
+
+
+
 
 <img width="930" height="925" alt="image" src="https://github.com/user-attachments/assets/afeff410-e05a-4a96-81df-6b2dc208fec0" />
