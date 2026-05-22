@@ -373,3 +373,283 @@ Canvi d'usuari al client per accedir com a "eros", qui forma part del grup "madr
 Comprovació de la denegació de permisos: en intentar crear el directori "EROS", el sistema mostra un error ja que l'usuari no té privilegis d'escriptura, validant així la configuració de seguretat.
 
 <img width="886" height="546" alt="SAMBA15" src="https://github.com/user-attachments/assets/58723c1b-3866-4923-bf5d-44fb5bafedfd" />
+
+
+
+**COMANDES LDAP**
+Gestió del domini Per estructurar l'organització i començar a gestionar usuaris, hi ha dues opcions principals: treballar amb fitxers LDIF o utilitzar comandes directament. En aquest apartat, ens centrarem en l'ús de comandes essencials com search, add, modify i delete.
+
+Abans de començar, comprovarem que el domini s'ha creat correctament i després revisarem els fitxers preparats a l'escriptori que contenen informació sobre els usuaris.
+
+<img width="1211" height="775" alt="image" src="https://github.com/user-attachments/assets/fbe6cac7-ec6f-4f22-85dc-690d319a68bd" />
+
+ldapadd Tal com es pot observar, el fitxer inclou diverses dades d'usuaris que volem incorporar al sistema. Ho farem utilitzant la comanda ldapadd.
+
+Per registrar els usuaris definits en el fitxer LDIF, executarem la comanda següent:
+
+ldapadd -x -D "cn=admin,dc=edgar,dc=cat" -w -f dades.ldif 
+
+
+
+<img width="1221" height="476" alt="image" src="https://github.com/user-attachments/assets/abf7449d-c692-4270-8c29-3853354338e8" />
+
+
+Seguidament el que farem sera crear un nou usuari a a mode de prova, mitjançant un fitxer .ldif, el primer que farem serà crear el fitxer:
+
+
+<img width="1208" height="506" alt="image" src="https://github.com/user-attachments/assets/46f7f329-36e6-4cb7-847d-e4ca9cd0fd41" />
+
+
+
+I seguidament afegim el usuari creat amb la següent ordre: 
+
+
+
+<img width="1137" height="84" alt="image" src="https://github.com/user-attachments/assets/b63f8eb5-2fc4-45c5-bef0-67343760895c" />
+
+
+ldapsearch Un cop els usuaris s'han creat correctament, podem verificar-ne l'existència amb la comanda ldapsearch:
+
+Finalment, realitzem una verificació amb la comanda ldapsearch per assegurar-nos que l'usuari s'ha creat correctament:
+
+ldapsearch -xLLL -b "uid=edgar1,ou=People,dc=edgar,dc=com"
+
+
+
+<img width="1165" height="349" alt="image" src="https://github.com/user-attachments/assets/d1ce99df-7363-4b25-b3a3-b4eb77e5fdba" />
+
+
+
+Tambeé afegirem wc -l per fer un recompte de línies, ja que no volem que aparegui tot el text a la sortida.
+
+
+
+<img width="1015" height="82" alt="image" src="https://github.com/user-attachments/assets/10aefd39-92d6-41fa-9a14-b7450e68689e" />
+
+
+
+
+Comprovacio de les unitats organitzatives
+
+Farem una busqueda que ens fara trobar les unitats organitzatives del domini.
+
+ldapsearch -xLLL -b "dc=edgar,dc=com" objectClass=organizationalUnit
+
+
+
+<img width="1216" height="715" alt="image" src="https://github.com/user-attachments/assets/901ab5e1-c170-4891-8ffc-ad04cbca3907" />
+
+
+
+Comprovació de Grups Per a comprovar el grups que tenim dintre de la UO Groups, executarem la següent comanda:
+
+ldapsearch -xLLL -b "dc=edgar,dc=com" "(ou=Groups)" dn
+
+
+<img width="1132" height="327" alt="image" src="https://github.com/user-attachments/assets/2c1a85d8-ae69-4f19-a0a7-dfb663c26592" />
+
+
+Creació d'una nova UO Per crear una nova Unitat Organitzativa (UO) anomenada "asix", necessitem preparar un fitxer .ldif amb la configuració de la nova UO. Un exemple del contingut del fitxer seria el següent:
+
+dn: ou=asix,dc=edgar,dc=com objectClass: top objectClass: organizationalUnit ou: asix
+
+
+
+<img width="1069" height="337" alt="image" src="https://github.com/user-attachments/assets/6a22ada7-e235-4a77-92de-cc0e11cf4155" />
+
+
+
+Seguit d'aixo fem un ldapadd per a afegir la UO al domini:
+
+
+<img width="1067" height="93" alt="image" src="https://github.com/user-attachments/assets/49104b48-cc47-4d80-90d0-cc24bc640e94" />
+
+
+Cuan ja hem completat la creació i l'hem afegit, comprovarem que estigui correctament afegida amb la següent comanda:
+
+ldapsearch -xLLL -b "dc=edgar,dc=com" objectClass=organizationalUnit uo
+
+
+
+<img width="1202" height="667" alt="image" src="https://github.com/user-attachments/assets/062f45a4-d96d-4c0f-99d2-f33ab800e0bf" />
+
+
+
+ldapdelete
+
+Hi ha dues maneres de fer esborrats en un domini LDAP: utilitzar la comanda ldapdelete o utilitzar un fitxer .ldif amb ldapmodify.
+
+Esborrar atributs d’un usuari amb ldapmodify Per esborrar atributs d’un usuari, primer necessitem crear un fitxer .ldif amb les modificacions que volem aplicar. En aquest cas, esborrarem l’atribut roomNumber de l’usuari ejohnson.
+
+
+
+<img width="1185" height="118" alt="image" src="https://github.com/user-attachments/assets/3587429e-c205-4753-a1f7-1bce048b8db3" />
+
+
+
+
+Per a acabar el que farem sera fer un ldapsearch per a comprovar que l'atribut roomNumber si s'hagui esborrat ldapsearch -xLLL -b "uid=ejohnson,ou=People,dc=edgar,dc=com"
+
+
+
+<img width="1194" height="78" alt="image" src="https://github.com/user-attachments/assets/cf1e18cf-7ae2-432f-8801-39c7ba14c7ac" />
+
+
+
+Esborrar una entrada amb ldapdelete Podem utilitzar la comanda ldapdelete per eliminar directament una entrada del domini. Per exemple, per esborrar una unitat organitzativa anomenada "prova":
+
+ldapdelete -x -D "cn=admin,dc=edgar,dc=com" -W "ou=prova,dc=edgar,dc=com"
+
+
+
+<img width="1112" height="258" alt="image" src="https://github.com/user-attachments/assets/cfc00313-a6d3-48fb-9a32-11ecf6dc6a45" />
+
+
+
+Esborrar una entrada amb un fitxer .ldif i ldapmodify També podem crear un fitxer .ldif amb les instruccions d'esborrat. Exemple del contingut del fitxer .ldif:
+
+
+
+
+<img width="1112" height="258" alt="image" src="https://github.com/user-attachments/assets/c01ccd28-3ee6-473a-a35a-e1ea2801e7f4" />
+
+
+
+dn: ou=prova,dc=edgar,dc=com changetype: delete Després, executem la comanda següent per aplicar l'esborrat:
+
+ldapmodify -x -D "cn=admin,dc=edgar,dc=com" -W -f dades.ldif
+
+
+
+<img width="949" height="304" alt="image" src="https://github.com/user-attachments/assets/c2082103-7b46-49d5-b672-e67182d9bb92" />
+
+
+
+Ara passarem a fer mes comprovacions, en aquest cas modificacions, el que farem sera afegir un mail i remplaçar el numero de telefon a l'usuari edgar1
+
+
+
+<img width="1100" height="88" alt="image" src="https://github.com/user-attachments/assets/2b50ae89-7488-440d-89d8-88f36774c77f" />
+
+
+
+**Servidor NFS**
+
+
+Servidors NFS El Network File System (NFS) és un protocol que permet compartir fitxers i directoris a través d’una xarxa, facilitant l’accés centralitzat als recursos. Amb NFS, un servidor pot exportar directoris, i els clients poden muntar-los com si fossin locals, cosa que el fa ideal per a entorns col·laboratius o sistemes distribuïts on diversos dispositius necessiten accedir als mateixos fitxers.
+
+Una característica clau d’aquest protocol és que l'autenticació es realitza a nivell de màquina, no d’usuari. Això significa que el servidor NFS confia en els dispositius clients autoritzats per accedir als directoris compartits. A més, combinant NFS amb LDAP, és possible centralitzar els directoris personals dels usuaris i muntar-los automàticament en qualsevol dispositiu de la xarxa, proporcionant una experiència homogènia independentment de l’equip utilitzat.
+
+Instal·lació part server
+
+Comencem configurant la part del servidor en un sistema Linux. Instal·larem el paquet necessari:
+
+apt install nfs-kernel-server 
+
+
+<img width="1207" height="372" alt="image" src="https://github.com/user-attachments/assets/e7a906c2-11ad-422f-b63f-438ff62c36a0" />
+
+
+
+Un cop instal·lat, verifiquem que el servei s’ha iniciat correctament:
+
+systemctl status nfs-server
+
+
+
+<img width="820" height="269" alt="image" src="https://github.com/user-attachments/assets/58290dea-d7e1-404b-ab53-bc3fd850325d" />
+
+
+
+
+Si el servei està en funcionament sense errors, el servidor NFS ja està llest per a ser configurat.
+
+Instal·lació part client Ubuntu
+
+Ara configurarem un client NFS en una màquina Ubuntu. Instal·lem els paquets necessaris per connectar-nos al servidor:
+
+apt install nfs-common rpcbind
+
+
+
+<img width="822" height="509" alt="image" src="https://github.com/user-attachments/assets/cba48782-2e13-407b-80b9-96a4f34c2f39" />
+
+
+
+
+Amb això, el sistema estarà preparat per muntar directoris compartits mitjançant NFS.
+
+Instal·lació part client Windows Per connectar un equip Windows a un servidor NFS, cal activar una funcionalitat específica dins del sistema operatiu.
+
+Procedim seguint aquests passos:
+
+Obrim el Panell de Control. Accedim a Programes i Característiques. A l'esquerra, fem clic a Activar o desactivar les característiques de Windows. Activem les opcions relacionades amb NFS.
+
+
+<img width="901" height="778" alt="image" src="https://github.com/user-attachments/assets/a29d331c-076a-4438-92dc-c494351030ec" />
+ 
+
+
+Un cop fet això, Windows ja estarà preparat per muntar unitats NFS i accedir als recursos compartits.
+
+Utilitzar el servidor NFS
+
+Per començar a utilitzar el servidor NFS, primer creem un directori al servidor i li assignem els permisos adequats.
+
+<img width="806" height="291" alt="image" src="https://github.com/user-attachments/assets/f637c4d0-56e3-4b64-9b0a-647e2e0552fe" />
+
+
+A continuació, editem el fitxer /etc/exports per afegir la ruta de la carpeta compartida i els paràmetres següents:
+
+→ Permet l'accés a tots els clients. rw → Concedeix permisos de lectura i escriptura (read-write). sync → Garanteix que les operacions d’escriptura es completen abans de respondre al client. no_subtree_check → Millora el rendiment evitant la verificació de subdirectoris.
+
+
+
+<img width="859" height="622" alt="image" src="https://github.com/user-attachments/assets/118c39f9-3421-4ded-a030-07ba9c5b38ea" />
+
+
+
+Després de realitzar aquests canvis, reiniciem el servei per aplicar-los. A més, creem un fitxer de prova dins la carpeta compartida per verificar-ne el funcionament.
+
+
+<img width="760" height="154" alt="image" src="https://github.com/user-attachments/assets/036af3f1-542e-4765-8286-e14c1063bb1f" />
+
+
+Ara provem l'accés des d’un client Windows. Obrim l'explorador de fitxers, anem a Altres ubicacions i introduïm l’adreça del servidor per connectar-nos.
+
+
+
+<img width="900" height="159" alt="image" src="https://github.com/user-attachments/assets/1df10d8d-5648-4ae2-9a21-aae8d0175bd9" />
+
+
+
+Per comprovar que tot funciona correctament, testejarem els permisos creant un document de text dins la carpeta compartida.
+
+
+
+<img width="876" height="153" alt="image" src="https://github.com/user-attachments/assets/d729794f-546e-4cc9-add1-9b893d33260f" />
+
+
+
+<img width="917" height="178" alt="image" src="https://github.com/user-attachments/assets/c68f8fb0-6ae5-4281-b28c-c947a74edfd4" />
+
+
+
+A continuació, comprovem des del servidor que els canvis s'han aplicat correctament i verifiquem els permisos assignats.
+
+
+
+<img width="806" height="110" alt="image" src="https://github.com/user-attachments/assets/ed8086c3-01be-44f3-b763-f3dc26b1df7b" />
+
+
+
+Ara accedim des d’un client Ubuntu. Primer, creem la carpeta compartida amb els permisos corresponents.
+
+
+<img width="812" height="335" alt="image" src="https://github.com/user-attachments/assets/c35db4c5-3fa7-431c-9af4-2b638e044d05" />
+
+
+Finalment, verifiquem els permisos i comprovem que els fitxers es mantenen a la carpeta compartida de manera íntegra. A més, creem un nou fitxer des del client per confirmar que el sistema funciona com cal.
+
+<img width="803" height="353" alt="image" src="https://github.com/user-attachments/assets/e0bda997-d0b4-44b4-8e5f-742a31abb0ad" />
+
