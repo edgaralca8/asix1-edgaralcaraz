@@ -215,3 +215,136 @@ A continuació, per comprovar que els canvis funcionen crearem una alerta critic
 
 <img width="843" height="115" alt="10" src="https://github.com/user-attachments/assets/569fa203-8f61-4d75-973c-9eff0c88ddad" />
 
+
+**MONITORITZACIO**
+
+Monitorització LOGS Els logs són fitxers de registre que documenten tot allò que succeeix en el sistema operatiu. Recullen informació tant dels processos del sistema com de les aplicacions, i són essencials per a tasques de diagnòstic i anàlisi. La majoria es troben ubicats al directori /var/log.
+
+
+<img width="1207" height="372" alt="image" src="https://github.com/user-attachments/assets/bc1990dd-79a3-4401-8bde-18ca77055ddf" />
+
+
+
+Per evitar que aquests registres creixin indefinidament, és important definir una rotació de logs. Això es pot gestionar editant el fitxer /etc/logrotate.conf, on podem establir, per exemple, que es rotin setmanalment. També podem personalitzar la rotació per a determinats logs mitjançant fitxers ubicats a /etc/logrotate.d.
+
+
+<img width="1216" height="703" alt="image" src="https://github.com/user-attachments/assets/0d2abf86-cd03-4686-ad5a-d1fb358d1786" />
+
+
+
+Com a exemple, veurem com esta configurarada la rotació dels logs de dpkg, especificant que es rotin mensualment, es conservin els últims 12 fitxers antics, es comprimeixin després de cada rotació i se'ls apliquin permisos concrets.
+
+<img width="1062" height="198" alt="image" src="https://github.com/user-attachments/assets/df791fb1-e170-400e-9229-326b36ec697b" />
+
+
+<img width="892" height="355" alt="image" src="https://github.com/user-attachments/assets/fd8a2fe2-8bcf-4135-89b3-38ad39da91d6" />
+
+
+Els fitxers de configuració com /etc/rsyslog.d/50-default.conf ens permeten definir quins tipus de missatges es registren i on es guarden. Qualsevol canvi en aquest fitxer requereix un reinici del servei rsyslog.
+
+<img width="924" height="693" alt="image" src="https://github.com/user-attachments/assets/aef0c5b0-d048-429c-abbb-962e98a4203d" />
+
+
+Per verificar-ne el funcionament, podem enviar una alerta al sistema de correu i comprovar si s'ha registrat correctament al fitxer corresponent. També podem fer que totes les alertes de nivell crític es desin en un directori específic, la qual cosa facilita l’anàlisi de situacions greus.
+
+<img width="900" height="215" alt="image" src="https://github.com/user-attachments/assets/29f90a8c-1631-4e07-9987-d49885c83c89" />
+
+
+
+<img width="924" height="377" alt="image" src="https://github.com/user-attachments/assets/723dca36-9cc2-46ad-9f62-1d623adf7711" />
+
+
+
+Systemd Journal
+
+El journal de systemd centralitza els registres dels diferents serveis i components del sistema. A diferència de comandes com cat, que només mostren un fitxer concret, journalctl ofereix una visió unificada.
+
+Amb l’ordre journalctl -p crit, podem filtrar i mostrar només els missatges de nivell crític. Això ens permet detectar errors com problemes amb RAID, intents fallits d’autenticació o alertes com la que hem generat.
+
+
+
+<img width="1210" height="317" alt="image" src="https://github.com/user-attachments/assets/1941e091-e90e-4cc5-bbec-a959e06dfc87" />
+
+
+
+LOGS en Xarxa Configuració del Receptor El primer pas per monitoritzar registres de manera remota és configurar el dispositiu receptor. Per fer-ho:
+
+Instal·lem el paquet rsyslog amb la següent comanda:
+
+sudo apt install rsyslog
+
+
+<img width="668" height="40" alt="image" src="https://github.com/user-attachments/assets/882be2c3-8cd5-4ed0-ae03-d83153e14866" />
+
+
+Editem el fitxer /etc/rsyslog.conf descomentant els mòduls i entrades necessàries per permetre la recepció de logs per xarxa.
+
+
+<img width="853" height="687" alt="image" src="https://github.com/user-attachments/assets/c0488207-85af-43c2-bee0-0a684d258d05" />
+
+
+
+Reiniciem el servei rsyslog i obrim els ports corresponents al tallafocs.
+
+
+
+<img width="739" height="236" alt="image" src="https://github.com/user-attachments/assets/fcb73cbd-c9c6-4873-a71f-7968454d3179" />
+
+
+
+Configuració de l’Emissor A continuació, configurem el dispositiu emissor, que enviarà els logs:
+
+També hi instal·lem rsyslog.
+
+Modifiquem /etc/rsyslog.conf per indicar la IP del receptor.
+
+Finalitzada la configuració, al receptor podem executar tail -f /var/log/syslog per veure els registres rebuts.
+
+Des de l’emissor, provoquem un error d’autenticació per generar un registre i comprovem que aparegui correctament al receptor, mostrant la IP origen.
+
+REMOT 1. Configuració de la màquina receptora (la que rep els logs) El primer pas és anar a la màquina virtual que rebrà els logs remots i instal·lar el servei rsyslog:
+
+
+
+<img width="1114" height="744" alt="image" src="https://github.com/user-attachments/assets/3c3a8dcc-4882-4bae-a300-7c4e4d824473" />
+
+
+
+Obrir els ports al firewall Per assegurar que la comunicació sigui possible, obrim el port 514 per UDP i TCP:
+sudo ufw allow 514/udp
+sudo ufw allow 514/tcp
+
+
+<img width="665" height="185" alt="image" src="https://github.com/user-attachments/assets/b3078d1c-898a-415d-bfcd-518407768409" />
+
+
+
+ Ara anirem a la màquina que envia el log, en aquesta també instal·larem rsyslog i en la configuració afegirem la ip del receptor.
+
+sudo apt update
+
+sudo apt install rsyslog 
+
+
+<img width="1128" height="698" alt="image" src="https://github.com/user-attachments/assets/d9f995fb-1c8e-4b1c-b092-2e03a216bea6" />
+
+
+
+Configuració de la màquina emissora (la que envia els logs) Ara anem a la màquina que enviarà els logs. Igualment, instal·lem rsyslog:
+
+
+
+<img width="1140" height="309" alt="image" src="https://github.com/user-attachments/assets/6dc116b2-50e8-4b30-9816-a1ac5c43974c" />
+
+
+
+Un cop tot estigui configurat, enviem alguns logs de prova des de la màquina emissora per verificar que arriben correctament.
+
+
+<img width="880" height="197" alt="image" src="https://github.com/user-attachments/assets/28bb7c41-2fc3-47ac-8e3d-ebc99a51aa52" />
+
+
+
+Confirmació de recepció Finalment, si la configuració ha estat correcta, veurem els missatges enviats des de la màquina emissora apareixent al fitxer de log de la màquina receptora.
+
+<img width="1133" height="420" alt="image" src="https://github.com/user-attachments/assets/a2c8bf42-aa19-45ce-a151-697bd051b971" />
