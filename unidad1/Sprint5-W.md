@@ -87,3 +87,85 @@ Eliminada
 
 
 <img width="930" height="925" alt="image" src="https://github.com/user-attachments/assets/afeff410-e05a-4a96-81df-6b2dc208fec0" />
+
+
+
+**MONITORITZACIO**
+
+
+Obrir l'eina: Prem la combinació de tecles Ctrl + Shift + Esc per llançar l'Administrador de tasques.  
+
+Pestanya "Processos" (Procesos): Aquí veuràs el llistat complet de les aplicacions obertes i els processos en segon pla. Aquesta vista et permet comprovar la despesa de recursos de tots els serveis del dispositiu de manera global o dividida per usuari.
+
+
+<img width="928" height="728" alt="image" src="https://github.com/user-attachments/assets/ea25b683-95dd-4597-8c85-688b1e8acae5" />
+
+
+
+Pestanya "Rendiment" (Desempeño/Rendimiento): Fes clic aquí per veure les gràfiques d'evolució en temps real i l'estat general de la CPU, la Memòria i l'Ethernet (Xarxa).  
+
+
+<img width="922" height="736" alt="image" src="https://github.com/user-attachments/assets/323e2d4c-2b2a-4fba-b7d8-6f9566c8ed65" />
+
+
+<img width="921" height="723" alt="image" src="https://github.com/user-attachments/assets/1b7fca36-d134-4a66-a041-55c9c9a1c3e8" />
+
+
+<img width="915" height="727" alt="image" src="https://github.com/user-attachments/assets/0d27d054-148c-4cac-
+a0bf-4ffdacb84515" />
+
+
+<img width="924" height="731" alt="image" src="https://github.com/user-attachments/assets/03446069-e7c0-4a1f-bb60-3b53e9c811e7" />
+
+
+Monitorització Avançada amb el Monitor de Recursos per a una anàlisi més profunda has d'obrir el Monitor de recursos, on es pot veure l'estat del sistema d'una manera molt més detallada. Des d'allí, has d'analitzar i documentar els següents quatre pilars:  
+
+
+<img width="1023" height="735" alt="image" src="https://github.com/user-attachments/assets/e35c74e9-2b77-4d21-aadb-670f1b589643" />
+
+
+<img width="1022" height="783" alt="image" src="https://github.com/user-attachments/assets/f20a7f14-a7ae-4387-91a6-c8d03f34306d" />
+
+
+
+
+CPU (Processador): Revisa els processos actius, el percentatge de processador que utilitza cadascun, els subprocesos (hilos) i el PID (identificador únic del procés que serveix per buscar-lo en altres eines).  
+
+
+<img width="1031" height="733" alt="image" src="https://github.com/user-attachments/assets/90586a8b-7abd-43a6-9bfe-14f24e8d7b22" />
+
+
+
+
+Memòria (RAM) Controla la memòria utilitzada per cada procés i l'estat de la memòria física (en ús, lliure i en espera).  Dada clau: Recorda que la memòria disponible real és la suma de la lliure i la que està en espera.
+
+
+
+<img width="1026" height="729" alt="image" src="https://github.com/user-attachments/assets/75b5546c-cc26-4278-ad2c-3753110e6a95" />
+
+
+
+Disc: Identifica quins processos estan accedint al disc dur fent operacions de lectura o escriptura, la velocitat en bytes per segon i els fitxers concrets que s'estan utilitzant. 
+Detecció de colls d'ampolla: Fixa't en el Temps de resposta (ms). 
+Si supera els 20-30 ms de manera constant o la cua de disc és molt alta, significa que el disc no pot processar les peticions i el sistema es ralentirà. 
+
+
+<img width="1024" height="732" alt="image" src="https://github.com/user-attachments/assets/93970e5b-5282-42dc-b998-a00062f47684" />
+
+
+
+
+Xarxa (Red): Aquest és el bloc detallat que es mostra a la captura de la pantalla final de la guia ). Comprova quines aplicacions envien o reben dades per la xarxa (Tx i Rx).  
+
+
+<img width="1028" height="736" alt="image" src="https://github.com/user-attachments/assets/c7d927ab-df01-4578-8c39-13c772c04396" />
+
+
+
+Anàlisi de seguretat: Revisa les connexions TCP actives, les IPs remotes amb les quals es comunica el servidor i els ports de comunicació utilitzats (com el 80 per a HTTP o el 443 per a HTTPS) per demostrar que saps detectar connexions sospitoses o no desitjades.  
+
+
+<img width="793" height="447" alt="image" src="https://github.com/user-attachments/assets/70f6e319-dcdf-48fe-a459-69943a51ff8a" />
+
+
+
